@@ -1,0 +1,29 @@
+<%= form_for(@karyawan) do |f| %>
+  <% if @karyawan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@karyawan.errors.count, "error") %> prohibited this karyawan from being saved:</h2>
+
+      <ul>
+      <% @karyawan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nip %><br>
+    <%= f.text_field :nip %>
+  </div>
+  <div class="field">
+    <%= f.label :nama %><br>
+    <%= f.text_field :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :alamat %><br>
+    <%= f.text_area :alamat %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

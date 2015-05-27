@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nip:</strong>
+  <%= @karyawan.nip %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @karyawan.nama %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @karyawan.alamat %>
+</p>
+
+<%= link_to 'Ubah', edit_karyawan_path(@karyawan) %> |
+<%= link_to 'Kembali', karyawans_path %>
